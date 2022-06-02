@@ -39,6 +39,16 @@ class LinkedList:
             print("Pass the node you want to add.")
             return
 
+    def add_at_idx(self,idx,node=None):
+        if idx:
+            if not self.head:
+                self.head = node
+                return
+            count = 0
+            temp = self.head   
+
+
+
 n3 = Node(3)
 n2 = Node(2)
 n2.next = n3
