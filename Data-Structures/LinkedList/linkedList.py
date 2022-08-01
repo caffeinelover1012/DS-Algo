@@ -47,7 +47,18 @@ class LinkedList:
             count = 0
             temp = self.head   
 
-
+    def reverse(self):
+        if not self.head:
+            return 
+        else:
+            prev = None
+            curr = self.head
+            while curr!=None:
+                temp = curr.next
+                curr.next = prev
+                prev = curr
+                curr = temp                
+            self.head = prev
 
 n3 = Node(3)
 n2 = Node(2)
@@ -59,4 +70,7 @@ ll = LinkedList(n1)
 ll.print()
 ll.add_to_end(Node(13))
 ll.add_to_front(Node(0))
+ll.print()
+print("Reversing Linked List in place")
+ll.reverse()
 ll.print()
